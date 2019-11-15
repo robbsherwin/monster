@@ -1,0 +1,23 @@
+npc Captain "Captain"
+{
+charnumber 2
+article "the"
+nouns "captain" "girl" "woman"
+pronouns "she", "her", "her", "herself"
+capacity 50
+maxhitpoints 10
+hitpoints 10
+armorclass 3
+attackadjust 0
+damagepotential 5
+peaceful true
+is neutral, living, female, hidden
+!in TheCaptainsQuarters
+confidence 78
+talkValue 0
+
+  long_desc
+  {
+
+  }
+}

@@ -1,0 +1,45 @@
+! routines.hug
+
+routine DoFix
+{
+	"I can't fix that."
+}
+
+routine DoKiss
+{
+	"This is an awful time for that."
+}
+
+routine DoLower
+{
+	"That can't be lowered."
+}
+
+routine DoRaise
+{
+	"That can't be raised, unfortunately."
+}
+
+routine DoRead
+{
+	"That doesn't seem to be readable."
+}
+
+routine DoRespond
+{
+	"There's no computer here to respond to an instant message with. (Try using the talk command, like talk to Captain)"
+}
+routine DoWakeCharacter
+{
+	"That's probably not necessary."
+}
+
+routine VersionOfGame()
+{
+	print "\BEnceladus\b"
+	print "Interactive Fiction"
+	print "Copyright (c) 2019. Written and programmed by Robb Sherwin"
+	print "Release 1.00 / Serial number 190123 / Hugo 3.1"
+	print "Please type >about for specific information and >help for Help."
+	""
+}

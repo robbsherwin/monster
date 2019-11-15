@@ -1,7 +1,8 @@
 !\---------------------------------------------------------------------------
-	
-        HUGO v2.5 SHELL
-        by Kent Tessman (c) 1995-1998
+
+        Monster by a Whisper
+        Robb Sherwin
+				11.15.2019
 
 ---------------------------------------------------------------------------\!
 
@@ -18,13 +19,22 @@
 #switches -d
 #endif
 
+#include "roodylib.g"
 #include "verblib.g"			! grammar must come first
-
-#ifset PRECOMPILED_LIBRARY
-#link "hugolib.hlb"
-#else
 #include "hugolib.h"
-#endif
+#include "roodylib.h"
+
+#include "system.h"
+#include "resource.h"
+#include "robblibrary.h"
+#include "routines.hug"
+#include "variables.hug"
+#include "window.h"
+
+constant MAXSONGS 1
+array temparray[10] = 0,0,0,0,0,0,0,0,0,0
+array MusicListingArray[MAXSONGS]
+array randomArgs[7]
 
 routine init
 {
@@ -48,8 +58,8 @@ routine init
 
 	player = you                    ! player initialization
 	location = emptyroom
-	old_location = location        
-	
+	old_location = location
+
 	move player to location
 	FindLight(location)
 	DescribePlace(location)
@@ -82,3 +92,93 @@ player_character you "you"
 
 room emptyroom "empty room"
 {}
+
+character NPC
+{
+type NPC
+
+is living
+
+maxhitpoints 10
+hitpoints 10
+armorclass 10
+attackadjust 0
+damagepotential 1
+peaceful true
+
+	before
+	{
+		object DoLook
+		{
+		!UpdateFaceWindow(self)
+
+		run self.long_desc
+		if (self.conscious = 0) and (self is not female) and (self.hitpoints <= 0) and (self.hitpoints > -100)
+		{
+			"\n";
+			CPronoun(self)
+			"is currently ";
+
+			! Would have to do this again below if any female characters can be drunk
+			if self is drunk
+			{
+				"passed ";
+			}
+			else
+			{
+				"knocked ";
+			}
+
+			"out."
+		}
+
+		if (self.conscious = 0) and (self is not female) and (self.hitpoints <= -100)
+		{
+			"\n";
+			CPronoun(self)
+			"is dead."
+		}
+
+		if (self.conscious = 0) and (self is female) and (self.hitpoints <= 0) and (self.hitpoints > -100)
+			"\nShe is currently knocked out."
+
+		if (self.conscious = 0) and (self is female) and (self.hitpoints <= -100)
+			"\nShe is dead."
+
+		}
+		object DoWakeCharacter
+		{
+			if self.conscious = 1
+			{
+				"That's not necessary."
+			}
+			else
+			{
+				"You try, but you don't get any sort of response back into consciousness."
+			}
+		}
+
+		object DoKiss
+		{
+			"That's not appropriate."
+		}
+		object DoListen
+		{
+			"Nothing out of the ordinary."
+		}
+
+	}
+
+in_scope
+	{ if self in location : return 1
+          else : return 0
+        }
+
+conscious
+	{ if self.hitpoints > 0 : return 1
+	  else : return 0
+	}
+
+}
+
+#include "characters.hug"
