@@ -1,0 +1,154 @@
+routine NewMenu
+{
+	! // We are doing this so the title screen graphic has a black background.
+	TEXTCOLOR = BLACK
+	BGCOLOR =  BLACK
+	color TEXTCOLOR, BGCOLOR
+
+	cls
+
+	PlayMusic("ENCEL01", "JESTER - Elysium", 80, true, true)
+	MusicListing = 0
+
+:IntroScreenMenu
+
+	!// Do this if we have graphics, but on mobile just start the game 
+	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
+
+		picture "ENCEL01", "titlescreen01"
+		pause
+
+		if word[0] = 'S', 's', 'Q', 'q', ESCAPE_KEY, ENTER_KEY, MOUSE_CLICK
+		{
+			jump IntroScreenStartGame
+		}
+		if word[0] = 'C', 'c'
+		{
+			ChangeColorMenu(false)
+		}
+		if word[0] = 'A', 'a'
+		{
+			ShowAboutThisGameGraphic()
+		}
+}
+:IntroScreenStartGame
+!Set colors to be default.
+
+	! // If we didn't pick anything, then let's make it bright white on red.
+	if TEXTCOLOR = BLACK and BGCOLOR = BLACK
+	{
+		TEXTCOLOR = BRIGHT_WHITE
+		BGCOLOR = RED
+		color TEXTCOLOR, BGCOLOR, TEXTCOLOR
+		cls
+	}
+}
+
+routine ChangeColorMenu(isIntroScreen)
+{
+local tempInput
+
+local PLAYER_SELECTED_BG
+local PLAYER_SELECTED_FG
+
+local PREVIOUS_BG
+local PREVIOUS_FG
+
+	!// Let's save these! So we can restore them at the end.
+	PREVIOUS_FG = TEXTCOLOR
+	PREVIOUS_BG = BGCOLOR
+
+	cls
+
+	TEXTCOLOR = WHITE
+	BGCOLOR =  BLACK
+	color TEXTCOLOR, BGCOLOR
+
+	cls
+
+	locate 1, 3
+
+	"Pick a color for the game's text:"
+
+	"0) Black 1) Blue 2) Green 3) Cyan 4) Red 5) Magenta 6) Brown 7) White\n
+	8) Dark Gray 9) Light Blue 10) Light Green 11) Light Cyan 12) Light Red\n
+	13) Light Magenta 14) Yellow 15) Bright White"
+	">";
+
+	input
+
+	if word[1]
+	{
+		tempInput = StringToNumber(word[1])
+	}
+	else
+	{
+		tempInput = StringToNumber(parse$)
+	}
+
+	PLAYER_SELECTED_BG = tempInput
+
+
+	"Pick a color for the game's background:"
+
+	"0) Black 1) Blue 2) Green 3) Cyan 4) Red 5) Magenta 6) Brown 7) White\n
+	8) Dark Gray 9) Light Blue 10) Light Green 11) Light Cyan 12) Light Red\n
+	13) Light Magenta 14) Yellow"
+	">";
+
+	input
+
+	if word[1]
+	{
+		tempInput = StringToNumber(word[1])
+	}
+	else
+	{
+		tempInput = StringToNumber(parse$)
+	}
+
+	PLAYER_SELECTED_FG = tempInput
+
+	!// 20190906 So, Hugor is defaulting to a white text entry color and it is overriding what I choose. And it defaults
+	!// to bright_white. So it'd like that to not be possible for a background screen.
+	if PLAYER_SELECTED_FG = 15
+	{
+		PLAYER_SELECTED_FG = 7
+	}
+
+	if PLAYER_SELECTED_BG = PLAYER_SELECTED_FG
+	{
+		"Error! Please pick different colors for the text color and background color."
+		pause
+		TEXTCOLOR = PREVIOUS_FG
+		BGCOLOR = PREVIOUS_BG
+		color PREVIOUS_FG, PREVIOUS_BG
+
+	}
+	else {
+		!// I used temporary variables rather than TEXTCOLOR and BGCOLOR because
+		!// otherwise we are setting them before we want to.
+
+		!// color <foreground>[, <background>[, <input color>]]
+		TEXTCOLOR = PLAYER_SELECTED_FG
+		BGCOLOR = PLAYER_SELECTED_BG
+		color TEXTCOLOR, BGCOLOR, TEXTCOLOR
+	}
+
+	cls
+}
+
+routine ShowAboutThisGameGraphic
+{
+	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
+		cls
+		picture "ENCEL01", "aboutscreen02"
+		pause
+	}
+	else
+	{
+		cls
+		DoAbout()
+		pause
+	}
+}
