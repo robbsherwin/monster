@@ -38,37 +38,52 @@ array randomArgs[7]
 
 routine init
 {
+  FORMAT = FORMAT | DESCFORM_F | NOINDENT_F
+
+  display.title_caption = "Monster by a Whisper by Robb Sherwin"
+
 	counter = -1
 
-	STATUSTYPE = 1                  ! score/turns
-	TEXTCOLOR = DEF_FOREGROUND
-	BGCOLOR = DEF_BACKGROUND
-	SL_TEXTCOLOR = DEF_SL_FOREGROUND
-	SL_BGCOLOR = DEF_SL_BACKGROUND
+  glkcheck()
+
+	STATUSTYPE = 0
+
+	!TEXTCOLOR = DEF_FOREGROUND
+	!BGCOLOR = DEF_BACKGROUND
+	!SL_TEXTCOLOR = DEF_SL_FOREGROUND
+  !SL_BGCOLOR = DEF_SL_BACKGROUND
+
+  TEXTCOLOR = 15
+  BGCOLOR = 13
+  color TEXTCOLOR, BGCOLOR
 
 	prompt = ">"
-	color TEXTCOLOR, BGCOLOR
 
-	cls
-	Font(BOLD_ON | DEFAULT_FONT)
-	"SHELL"
-	Font(BOLD_OFF)
-	"An Interactive Starting Point\n"
-	print BANNER
+  NewMenu()
 
-	player = you                    ! player initialization
-	location = emptyroom
-	old_location = location
+  cls
 
-	move player to location
-	FindLight(location)
-	DescribePlace(location)
-	location is visited
-	CalculateHolding(player)
+  DEFAULT_FONT	= PROP_ON
+  Font(DEFAULT_FONT)
 
-#ifset USE_PLURAL_OBJECTS
-	InitPluralObjects
-#endif
+  player = JaRod                    ! player initialization
+  location = TheExecutionRoom
+  old_location = location
+
+  move player to location
+  FindLight(location)
+
+  locate 1,10
+
+  DescribePlace(location)
+  location is visited
+  CalculateHolding(player)
+
+  old_screenwidth = display.screenwidth
+
+  #ifset USE_PLURAL_OBJECTS
+  InitPluralObjects
+  #endif
 }
 
 #ifset PRECOMPILED_LIBRARY
@@ -87,11 +102,18 @@ routine main
 		speaking = 0
 }
 
-player_character you "you"
-{}
+player_character JaRod "I"
+{
+pronoun "I" "me" "my"
+nouns "jarod" "me" "self" "ja'rod" "butler"
+adjectives "ja'rod" "jarod"
 
-room emptyroom "empty room"
-{}
+	long_desc
+	{
+		"I am a twenty-four year old Ethiopian male, I am 5'9\" tall and I weigh 145 pounds. I have black hair and brown eyes. I am wearing a white T-shirt, blue jeans and grey moon boots for shoes. My
+    hair is buzzed pretty tightly against my head and I have a little bit of beard stubble."
+	}
+}
 
 character NPC
 {
