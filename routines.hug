@@ -1,5 +1,17 @@
 ! routines.hug
 
+routine DoAbout
+{
+	"Monster by a Whisper by Robb Sherwin."
+	"Originally submitted for the 2020 Interactive Fiction Competition."
+	"You can talk to people just by using the >talk command, it's context sensitive."
+	"You can see current exits for the room you're in by doing >exits"
+	"Try >help for version info, credits and other common commands."
+	"Please use the Hugor interpreter for Windows, Mac and Linux: http://ifwiki.org/index.php/Hugor"
+	"To play other games by this author, go to https://www.joltcountry.com/games"
+	"For Boggit."
+}
+
 routine DoFix
 {
 	"I can't fix that."

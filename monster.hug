@@ -24,12 +24,25 @@
 #include "hugolib.h"
 #include "roodylib.h"
 
+#include "glk.h"
+#include "introscreen.hug"
 #include "system.h"
 #include "resource.h"
 #include "robblibrary.h"
 #include "routines.hug"
 #include "variables.hug"
 #include "window.h"
+#include "locations.hug"
+
+global GRAPHICS_ON = TRUE
+global last_drawn_picture
+global force_repaint
+global current_resource_file
+global current_resource
+global old_screenwidth
+property graphic
+
+global testValue = 0 !// Just used when we need a spare use-once variable
 
 constant MAXSONGS 1
 array temparray[10] = 0,0,0,0,0,0,0,0,0,0
