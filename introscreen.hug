@@ -15,7 +15,7 @@ routine NewMenu
 	!// Do this if we have graphics, but on mobile just start the game
 	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
 
-		picture "ENCEL01", "titlescreen01"
+		picture "MONST01", "titlescreen01"
 		pause
 
 		if word[0] = 'S', 's', 'Q', 'q', ESCAPE_KEY, ENTER_KEY, MOUSE_CLICK

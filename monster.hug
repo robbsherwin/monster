@@ -216,4 +216,10 @@ conscious
 
 }
 
+resource "MONST01"
+{
+	"jpg/titlescreen01.jpg"
+}
+
+
 #include "characters.hug"

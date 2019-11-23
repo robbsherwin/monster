@@ -1,4 +1,36 @@
-room TheExecutionRoom
+room TheExecutionRoom "The Sunset"
 {
+  long_desc
+  {
+    if self is not visited
+    {
+      self is incapacitated
+
+      "I was on a derelict ship. That I remember. Two of us. We found white cheese curds, we thought the Captain would like it for
+      her poutine. I was with Alexandra, she's the life support tech in our crew. I don't know how we got here.
+      This is different. This is ... I can see a scrolling red LED marquee. This is a ship called the Sunset. I'm chained -- ope, the
+      marquee is not finished. This is a ship called the Sunset Sponsored by Guaranteed Rate.\n"
+
+      "I'm chained to a metal column in a cold room. My crewmate Alexandra is to my left, chained up as well. We're just two
+      low-level nobodies enlisted on a green flying saucer. What would anyone want with us? Are mortgage rates so bad they've
+      taken to kidnapping applicants?"
+
+      Activate(Commander_Carl_Arrives)
+
+      self.name = "The Sunset brought to us by Guaranteed Rate."
+
+    }
+    else {
+
+      if self is incapacitated
+      {
+
+      }
+      else {
+
+      }
+
+    }
+  }
 
 }

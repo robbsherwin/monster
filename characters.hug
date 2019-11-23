@@ -21,3 +21,14 @@ talkValue 0
 
   }
 }
+
+npc CommanderCarl "The Commander"
+{
+charnumber 7
+talkValue 1
+
+  long_desc
+  {
+  
+  }
+}

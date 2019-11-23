@@ -69,7 +69,7 @@ attribute opaque					! Hopefully shuts up the goddamn listobjects code in invent
 attribute accessible
 attribute blunt_combat_object
 attribute aimed_at
-
+attribute incapacitated
 
 
 !Globals
