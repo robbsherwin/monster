@@ -1,0 +1,23 @@
+daemon Commander_Carl_Arrives
+{
+  timer = 0
+}
+
+event in Commander_Carl_Arrives
+{
+  select(self.timer)
+  case 1
+  {
+    move CommanderCarl
+    "An older white man on the opposite side of the door presses a keycard up against the door frame.
+    Nothing happens. He tries again. Still nothing. We can't hear him, but he seems to be shouting into the sky.\n"
+
+    "After another 15 seconds where he very specifically avoids looking at us he enters the room. He has a pencil-thin
+    moustache. He's decked out in a grey uniform, grey cap, grey pants and black boots. He is wearing a pince-nez and is clean-shaven.
+    I've seen some ridiculous costumes in the solar system. This guy is trying really hard to make people think he's almost a Nazi.
+    94 percent dressed like a Nazi.\n"
+    "He approaches and speaks to me.\n"
+
+    "\"Your name,\" he says, evenly."
+  }
+}
