@@ -1,6 +1,6 @@
 daemon Commander_Carl_Arrives
 {
-  timer = 0
+  timer 0
 }
 
 event in Commander_Carl_Arrives
@@ -8,7 +8,8 @@ event in Commander_Carl_Arrives
   select(self.timer)
   case 1
   {
-    move CommanderCarl
+    move CommanderCarl to TheExecutionRoom
+    
     "An older white man on the opposite side of the door presses a keycard up against the door frame.
     Nothing happens. He tries again. Still nothing. We can't hear him, but he seems to be shouting into the sky.\n"
 

@@ -29,6 +29,7 @@
 #include "system.h"
 #include "resource.h"
 #include "robblibrary.h"
+#include "daemons.hug"
 #include "routines.hug"
 #include "variables.hug"
 #include "window.h"
