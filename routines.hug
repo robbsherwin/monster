@@ -46,6 +46,16 @@ routine DoWakeCharacter
 	"That's probably not necessary."
 }
 
+routine InitializeGameEvents()
+{
+local x
+
+	for(x=0; x<MAX_GAME_EVENTS; x++)
+	{
+		GameEvents[x] = 0
+	}
+}
+
 routine VersionOfGame()
 {
 	print "\BEnceladus\b"

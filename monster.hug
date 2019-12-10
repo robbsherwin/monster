@@ -30,6 +30,7 @@
 #include "resource.h"
 #include "robblibrary.h"
 #include "daemons.hug"
+#include "objects.hug"
 #include "routines.hug"
 #include "variables.hug"
 #include "window.h"
@@ -41,6 +42,8 @@ global force_repaint
 global current_resource_file
 global current_resource
 global old_screenwidth
+global temp_foregroundcolor
+global temp_backgroundcolor
 property graphic
 
 global testValue = 0 !// Just used when we need a spare use-once variable
@@ -50,8 +53,13 @@ array temparray[10] = 0,0,0,0,0,0,0,0,0,0
 array MusicListingArray[MAXSONGS]
 array randomArgs[7]
 
+constant MAX_GAME_EVENTS 50
+array GameEvents[MAX_GAME_EVENTS]
+
 routine init
 {
+  InitializeGameEvents()
+
   FORMAT = FORMAT | DESCFORM_F | NOINDENT_F
 
   display.title_caption = "Monster by a Whisper by Robb Sherwin"
@@ -220,6 +228,7 @@ conscious
 resource "MONST01"
 {
 	"jpg/titlescreen01.jpg"
+  "jpg/jarod01.jpg"
 }
 
 
