@@ -1,6 +1,6 @@
 npc Captain "Captain"
 {
-charnumber 2
+charnumber 1
 article "the"
 nouns "captain" "girl" "woman"
 pronouns "she", "her", "her", "herself"
@@ -13,7 +13,7 @@ damagepotential 5
 peaceful true
 is neutral, living, female, hidden
 !in TheCaptainsQuarters
-confidence 78
+confidence 100
 talkValue 0
 
   long_desc
@@ -22,13 +22,60 @@ talkValue 0
   }
 }
 
-npc CommanderCarl "The Commander"
+npc Alexandra "Alexandra"
 {
-charnumber 7
-talkValue 1
+charnumber 2
+nouns "alexandra" "mays"
+adjective "alexandra"
+pronouns "she", "her", "her", "herself"
+capacity 50
+maxhitpoints 10
+hitpoints 10
+armorclass 3
+attackadjust 0
+damagepotential 5
+peaceful true
+is neutral, living, female, hidden
+in TheExecutionRoom
+confidence 100
+talkValue 0
 
   long_desc
   {
-  
+    if GameEvents[1] = 1
+    {
+      GameEvents[1] = 2
+      !// Do Alexandra's picture
+    }
+    else {
+      "Alexandra is a tall redhead, taller than I am, anyway. She has blue eyes and is from somewhere in America. She is the Plagoo's
+      life support technician. She usually dresses in a casual manner, although considering some of our crew she's comparatively downright
+      conservative. She is wearing a crop top, pair of blue jeans and white Nike tennis shoes."
+    }
+  }
+
+}
+
+npc CommanderCarl "The Commander"
+{
+charnumber 3
+nouns "commander" "carl"
+adjective "commander"
+pronouns "he", "his", "his", "himself"
+capacity 50
+maxhitpoints 10
+hitpoints 10
+armorclass 3
+attackadjust 0
+damagepotential 5
+peaceful true
+is neutral, living, hidden
+in TheExecutionRoom
+confidence 100
+talkValue 0
+
+  long_desc
+  {
+
   }
 }

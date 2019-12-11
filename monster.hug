@@ -55,6 +55,9 @@ array randomArgs[7]
 
 constant MAX_GAME_EVENTS 50
 array GameEvents[MAX_GAME_EVENTS]
+! GameEvents[0] = Has Ja'Rod worn the x-ray specs yet?
+! GameEvents[1] = Have we shown the Alexandra graphic yet? 
+! GameEvents[2] =
 
 routine init
 {
@@ -94,6 +97,9 @@ routine init
 
   move player to location
   FindLight(location)
+
+  !// He's chained up to start the game
+  JaRod is incapacitated
 
   locate 1,10
 
