@@ -19,6 +19,13 @@
 #switches -d
 #endif
 
+!// Verbs
+verb "jump", "hop"
+  * DoJump
+
+
+!// Verbs     
+
 #include "roodylib.g"
 #include "verblib.g"			! grammar must come first
 #include "hugolib.h"
@@ -30,6 +37,7 @@
 #include "resource.h"
 #include "robblibrary.h"
 #include "daemons.hug"
+#include "help.hug"
 #include "objects.hug"
 #include "routines.hug"
 #include "variables.hug"
@@ -44,6 +52,10 @@ global current_resource
 global old_screenwidth
 global temp_foregroundcolor
 global temp_backgroundcolor
+
+global DEFAULT_TEXTCOLOR !used for the help file
+global DEFAULT_BGCOLOR !used for the help file
+
 property graphic
 
 global testValue = 0 !// Just used when we need a spare use-once variable
@@ -56,7 +68,7 @@ array randomArgs[7]
 constant MAX_GAME_EVENTS 50
 array GameEvents[MAX_GAME_EVENTS]
 ! GameEvents[0] = Has Ja'Rod worn the x-ray specs yet?
-! GameEvents[1] = Have we shown the Alexandra graphic yet? 
+! GameEvents[1] = Have we shown the Alexandra graphic yet?
 ! GameEvents[2] =
 
 routine init

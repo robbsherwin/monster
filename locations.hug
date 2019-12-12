@@ -32,5 +32,17 @@ room TheExecutionRoom "The Sunset"
 
     }
   }
-
+  before
+  {
+    location DoJump
+    {
+      if self is incapacitated
+      {
+        "I can't do that because of the chains!"
+      }
+      else {
+        "I hop on the spot. I hear a 'clank!' from the metal floor."
+      }
+    }
+  }
 }

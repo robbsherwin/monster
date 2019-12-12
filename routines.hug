@@ -17,6 +17,11 @@ routine DoFix
 	"I can't fix that."
 }
 
+routine DoJump
+{
+	"I don't have a need to do that right now."
+}
+
 routine DoKiss
 {
 	"This is an awful time for that."
