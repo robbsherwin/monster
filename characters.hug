@@ -78,4 +78,42 @@ talkValue 0
   {
 
   }
+  before
+  {
+    object DoTalk {
+      select(self.timer)
+      case 1
+      {
+        "\"Ja'Rod Butler,\" I tell him, figuring there is no harm in providing that information. I was told by my Captain once that if I were ever kidnapped it's okay to tell the kidnappers my name,
+        my registration number and the name of my ship. I don't remember my registration number so I hope I don't get asked it.\n"
+
+        "\"You are an X-ray technician on the HMCS Plagoo,\" says the Commander. Definitely a statement, not a question. \"What the name of your Captain?\""
+        CommanderCarl.talkValue = 2
+      }
+      case 2
+      {
+        "\"That's none of your business!\" I say to him. \"I'll die before telling--\"\n"
+        "Alexandra, my crew-mate (chained up next to me) cuts me off.\n"
+        "\"Don't kill him, he's an idiot. Our Captain's name is Jessica Stafford. I am sure she'd like us back. She's broke, though, which is why
+        we were doing a scavenger run of that derelict craft that you took us away from.\"\n"
+        "Commander Carl produces a knife. Not gonna lie, I'm not a big knife guy. I know scimitars and butter ones by name and this is neither. I don't know how to spell the word stilleto, but it might be one
+        of those?\n"
+        "\"And you,\" the Commander says. \"Alexandra Mays. We know all about you. You applied here.\" I can see a dozen different sharp replies spin through Alexandra's mind.\n"
+        "\"Did I mess up the 'Objective' section of my resume?\" she asks, settling on that one.\n"
+        "\"I will be back after having tested this information,\" says the Commander. \"Don't move,\" he adds with a sneer.\n"
+        "The Commander turns on his heel to leave. He gets an audio message through the ship's intercom system.\n"
+        "\"Commander...\" says a male voice, cracking. \"Commander, this is Number Two. Seem to have lost my keycard, sir...\" Commander Carl just shakes his head and mutters
+        something about giving that one away next.\n"
+        "He uses his own keycard against the door and leaves the room."
+        Activate(Alexandra_Talks_ExecutionRoom)
+        CommanderCarl.talkValue = 0
+        remove CommanderCarl
+      }
+      case else
+      {
+        "I have nothing to say to him."
+      }
+
+    }
+  }
 }

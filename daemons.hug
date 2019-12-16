@@ -18,10 +18,28 @@ event in Commander_Carl_Arrives
     moustache. He's decked out in a grey uniform, grey cap, grey pants and black boots. He is wearing a pince-nez and is clean-shaven.
     I've seen some ridiculous costumes in the solar system. This guy is trying really hard to make people think he's almost a Nazi.
     94 percent dressed like a Nazi.\n"
-    
+
     "He approaches and speaks to me.\n"
 
     "\"I am Commander Carl,\" he says without eye contact. \"I am in charge of this vessel.\" He ignores Alexandra, which I feel
     may be a weird gender-anger thing. He makes eye contact with me for the first time. \"Your name,\" he says, evenly."
+
+    CommanderCarl.talkValue = 1
+
+  }
+}
+
+daemon Alexandra_Talks_ExecutionRoom
+{
+  timer 0
+}
+
+event in Alexandra_Talks_ExecutionRoom
+{
+  self.timer++
+  select(self.timer)
+  case 2
+  {
+  
   }
 }
