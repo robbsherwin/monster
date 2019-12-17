@@ -34,15 +34,20 @@ room TheExecutionRoom "The Sunset"
   }
   before
   {
-    location DoJump
-    {
-      if self is incapacitated
+      AnyVerb(location)
       {
-        "I can't do that because of the chains!"
-      }
-      else {
-        "I hop on the spot. I hear a 'clank!' from the metal floor."
+          if player is incapacitated
+          {
+              select verbroutine
+              case &DoLookAround, &DoLook, &DoTalk : return false
+              case else :  "I'm chained up!."
+              return true
+          }
+          else {
+              return false
+          }
+
       }
     }
-  }
+
 }
