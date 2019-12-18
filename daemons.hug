@@ -25,6 +25,7 @@ event in Commander_Carl_Arrives
     may be a weird gender-anger thing. He makes eye contact with me for the first time. \"Your name,\" he says, evenly."
 
     CommanderCarl.talkValue = 1
+    
     Activate(Commander_Carl_Demands_Action)
 
   }

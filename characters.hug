@@ -81,7 +81,7 @@ talkValue 0
   before
   {
     object DoTalk {
-      select(self.timer)
+      select(self.talkValue)
       case 1
       {
         "\"Ja'Rod Butler,\" I tell him, figuring there is no harm in providing that information. I was told by my Captain once that if I were ever kidnapped it's okay to tell the kidnappers my name,
@@ -89,7 +89,7 @@ talkValue 0
 
         "\"You are an X-ray technician on the HMCS Plagoo,\" says the Commander. Definitely a statement, not a question. \"What the name of your Captain?\""
         CommanderCarl.talkValue = 2
-        GameEvents[2] = 1 
+        GameEvents[2] = 1
       }
       case 2
       {
@@ -104,7 +104,7 @@ talkValue 0
         "\"I will be back after having tested this information,\" says the Commander. \"Don't move,\" he adds with a sneer.\n"
         "The Commander turns on his heel to leave. He gets an audio message through the ship's intercom system.\n"
         "\"Commander...\" says a male voice, cracking. \"Commander, this is Number Two. Seem to have lost my keycard, sir...\" Commander Carl just shakes his head and mutters
-        something about giving that one away next.\n"
+        something about chaining up that guy next.\n"
         "He uses his own keycard against the door and leaves the room."
         Activate(Alexandra_Talks_ExecutionRoom)
         CommanderCarl.talkValue = 0
