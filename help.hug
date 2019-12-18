@@ -85,16 +85,14 @@ routine Help_Introduction
  CenterTitle("\BIntroduction\b")
 
  "\nIt is the future.\n"
- "You are Ensign Ja'Rod Butler, returning from an extended shore leave, back on the spaceship known as
- the HMCS Plagoo.\n"
+ "You are Ensign Ja'Rod Butler, X-ray technician on the HMCS Plagoo.\n"
 
- "Two minutes ago, you were alerted to the fact that a werewolf has somehow gotten onto the ship. One
- minute ago you made it into the quarters of the Plagoo's Captain to wake her up.\n"
+ "Ten minutes ago you were investigating a derelict ship near Jupiter with your fellow crew-mate Alexandra. Both
+ of you blacked out and woke up chained to an I-beam on a completely different ship.\n"
 
- "With any luck you'll be able to get rid of the werewolf without it hurting anyone. But, spoiler, check your
- inventory.\n"
-
- "You're not carrying any luck."
+ "An interrogation begins, as a man that is trying extremely hard to give off a Nazi vibe without actually purchasing
+ the swastika armbands starts asking personal questions about you, your Captain and your crew. If you can just get
+ him to leave, perhaps you and Alexandra can discover a way out of this mess and why you were abducted in the first place!"
 
  "\n[Press a key...]";
  pause
@@ -239,6 +237,10 @@ routine Help_Credits
  "Patreon: https://www.patreon.com/asteltainn"
  "Twitter: https://twitter.com/asteltainn\n"
 
+ "Figure modeling by Kristie Conaughty."
+ "Instagram: https://instagram.com/kristieconaughty\n"
+
+
  "\BMUSIC\b"
 
  "\n[Press a key...]";
@@ -250,10 +252,10 @@ routine Help_License
  CenterTitle("\BLicense and Copyright Information\b")
 
  print "\n\B"; GameTitle; "\b"
- "Copyright (c) 2019 by Robb Sherwin"
+ "Copyright (c) 2020 by Robb Sherwin"
 
  "\n\BHugo Compiler and Engine\b"
- "Copyright (c) 1995-2019 by Kent Tessman"
+ "Copyright (c) 1995-2020 by Kent Tessman"
 
  GameTitle
  " is licensed under the Attribution-Noncommercial-No Derivative Works 3.0 Unported license.\n"
