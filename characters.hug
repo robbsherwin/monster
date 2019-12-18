@@ -89,6 +89,7 @@ talkValue 0
 
         "\"You are an X-ray technician on the HMCS Plagoo,\" says the Commander. Definitely a statement, not a question. \"What the name of your Captain?\""
         CommanderCarl.talkValue = 2
+        GameEvents[2] = 1 
       }
       case 2
       {

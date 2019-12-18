@@ -40,7 +40,7 @@ room TheExecutionRoom "The Sunset"
           {
               select verbroutine
               case &DoLookAround, &DoLook, &DoTalk : return false
-              case else :  "I'm chained up!."
+              case else :  "I'm chained up!"
               return true
           }
           else {

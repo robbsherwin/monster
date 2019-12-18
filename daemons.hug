@@ -25,7 +25,29 @@ event in Commander_Carl_Arrives
     may be a weird gender-anger thing. He makes eye contact with me for the first time. \"Your name,\" he says, evenly."
 
     CommanderCarl.talkValue = 1
+    Activate(Commander_Carl_Demands_Action)
 
+  }
+}
+
+daemon Commander_Carl_Demands_Action
+{
+  timer 0
+}
+
+event in Commander_Carl_Demands_Action
+{
+  self.timer++
+  select(self.timer)
+  case 2
+  {
+    if GameEvents[2] = 0
+    {
+      !//This means that Ja'Rod didn't talk to him as the next move
+    }
+    else {
+      Deactivate(self)
+    }
   }
 }
 
@@ -40,6 +62,6 @@ event in Alexandra_Talks_ExecutionRoom
   select(self.timer)
   case 2
   {
-  
+
   }
 }
