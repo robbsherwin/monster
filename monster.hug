@@ -20,6 +20,9 @@
 #endif
 
 !// Verbs
+verb "catch", "grab"
+  * DoCatch
+  
 verb "jump", "hop"
   * DoJump
 
@@ -70,6 +73,7 @@ array GameEvents[MAX_GAME_EVENTS]
 ! GameEvents[0] = Has Ja'Rod worn the x-ray specs yet?
 ! GameEvents[1] = Have we shown the Alexandra graphic yet?
 ! GameEvents[2] = Did Ja'Rod talk to Carl for the first move?
+! GameEvents[3] = Are we OK to use the catch verb?
 
 routine init
 {

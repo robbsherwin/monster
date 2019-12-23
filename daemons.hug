@@ -45,8 +45,19 @@ event in Commander_Carl_Demands_Action
     if GameEvents[2] = 0
     {
       !//This means that Ja'Rod didn't talk to him as the next move
-      "The Commander looks at me with contempt smeared across his face.\n"
-      
+      "\nThe Commander looks at me with contempt smeared across his face. His sneer is interrupted by a voice over the intercom
+      system.\n"
+      "\"Commander Carl,\" says a voice from elsewhere.\n"
+      "Carl breaks eye contact with me. He flips open his computerphone.\n"
+      "\"Carl here,\" he says. \"What is it?\"\n"
+      "\"Commander, this is Number Two. We're having a bit of trouble with the shipwide stereo system at the moment. Can you
+      hear any music? Is there music play--\"\n"
+      "\"Yes!\" he shouts. He flips his computerphone shut.\n"
+      "\"Your name,\" he says to me, \"Or I'll have your tongue cut out and you'll never tell anyone anything ever again.\"\n"
+      "\"You know,\" interjects Alexandra, \"If you remove his tongue he still has hands. He can still type, to communicate you know.\"\n"
+      "He flicks a look towards here. \"My word on this ship is law.\" He returns his gaze to me. \"His hands will also be cut off.\"\n"
+      "\"That's appropriation,\" says Alexandra to herself. \"Hey! Excuse me, that's app-\"\n"
+      "\"Stop!\" I shout. \"Just let me think for a second!\""
     }
     else {
       Deactivate(self)
@@ -65,6 +76,13 @@ event in Alexandra_Talks_ExecutionRoom
   select(self.timer)
   case 2
   {
+    "Alexandra checks again to make sure that there's nobody near the door. \"Ja'Rod, I have a bobby pin in my hair that I can reach. I am going to take
+    it out and throw it to you so you can catch it and pick your padlock, okay?\"\n"
+    "I have no idea what a 'bobby pin' is. I'm also not the strongest lockpicker in the solar system, having never previously thought about the concept for
+    even a split second of my life. I just nod, though, because dark circles are starting to appear under Alexandra's eyes and I don't know if she's got
+    the strength to try herself.\n"
+    "\"Okay, Ja'Rod? Are you ready?\" She takes one out of her hair and throws it in a graceful arc towards me."
 
+    GameEvents[3] = 1
   }
 }

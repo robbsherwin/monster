@@ -39,8 +39,18 @@ room TheExecutionRoom "The Sunset"
           if player is incapacitated
           {
               select verbroutine
-              case &DoLookAround, &DoLook, &DoTalk : return false
+              case &DoLookAround, &DoLook, &DoTalk, &DoWait : return false
+              case &DoCatch {
+                if GameEvents[3] = 0
+                {
+                  "I can't do anything like that in my situation."
+                }
+                else {
+
+                }
+              }
               case else :  "I'm chained up!"
+
               return true
           }
           else {

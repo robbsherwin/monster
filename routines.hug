@@ -12,6 +12,11 @@ routine DoAbout
 	"For Boggit."
 }
 
+routine DoCatch
+{
+	"There's nothing I can catch right now."
+}
+
 routine DoFix
 {
 	"I can't fix that."

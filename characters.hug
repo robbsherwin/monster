@@ -53,6 +53,28 @@ talkValue 0
       conservative. She is wearing a crop top, pair of blue jeans and white Nike tennis shoes."
     }
   }
+  before
+  {
+    object DoTalk {
+      select(self.talkValue)
+      case 0
+      {
+        "I don't know if now is a good time to talk to her!"
+      }
+      case 1
+      {
+        "\"You looked like you were about to say something else to that jerk?\" I ask her. \"Did you really apply for a job on this ship?\"\n"
+        "\"Yes,\" she says, \"They have the same life support framework I was using before I got hired onto the Plagoo. I don't feel very well,
+        Ja'Rod, I don't know what is happening... but I don't feel good at all.\" She is starting to look worse for all of this now as well - sweating
+        and making some shaking in her limbs."
+        self.talkValue = 999
+
+      }
+      case else {
+        "I don't have anything to say to Alexandra at the moment."
+      }
+    }
+  }
 
 }
 
@@ -109,12 +131,12 @@ talkValue 0
         Activate(Alexandra_Talks_ExecutionRoom)
         CommanderCarl.talkValue = 0
         remove CommanderCarl
+        Alexandra.talkValue = 2
       }
       case else
       {
         "I have nothing to say to him."
       }
-
     }
   }
 }
