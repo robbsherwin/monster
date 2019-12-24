@@ -22,7 +22,7 @@
 !// Verbs
 verb "catch", "grab"
   * DoCatch
-  
+
 verb "jump", "hop"
   * DoJump
 
@@ -251,6 +251,7 @@ resource "MONST01"
 {
 	"jpg/titlescreen01.jpg"
   "jpg/jarod01.jpg"
+  "jpg/alexandra01-2560x1440.jpg"
 }
 
 
