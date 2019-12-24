@@ -100,4 +100,6 @@ article "the"
 		inches long? I don't have enough hair on my head* to need it for that but it could be helpful with other things.\n"
 		"* Or elsewhere!"
 	}
+
+	!// If we drop it ... we shouldn't be able to just pick it up. 
 }
