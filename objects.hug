@@ -87,3 +87,17 @@ in TheExecutionRoom
     }
 	}
 }
+
+object bobbyPin "bobby pin"
+{
+nouns "pin" "lockpick" "pick"
+adjective "bobby"
+article "the"
+
+	long_desc
+	{
+		"It's actually a pretty nice, machine-tumbled clip that allows anyone to hold their hair in a certain place. Maybe about four
+		inches long? I don't have enough hair on my head* to need it for that but it could be helpful with other things.\n"
+		"* Or elsewhere!"
+	}
+}
