@@ -101,5 +101,44 @@ article "the"
 		"* Or elsewhere!"
 	}
 
-	!// If we drop it ... we shouldn't be able to just pick it up. 
+	!// If we drop it ... we shouldn't be able to just pick it up.
+}
+
+object padlock "padlock"
+{
+nouns "padlock"
+article "the"
+key_object bobbyPin
+is lockable, locked, hidden
+in TheExecutionRoom
+
+	long_desc
+	{
+		"Not a great looking lock, I don't think - probably pickable if I had the right tool"
+	}
+	before {
+		object DoUnlock
+		{
+			if bobbyPin in player
+			{
+				self is not locked
+				player is not incapacitated
+
+				"It takes about 15 seconds of fidgeting with the bobby pin and I am able to completely pick the padlock. It falls to the floor. I'm able to catch
+				the bobby pin as the lock drops.\n"
+
+				"\"I did it!\" I say to Alexandra, looking for some confirmation at how wicked I am. She just nods quietly. She is really not doing well.\n"
+
+				"I'm able to take a look around the room - there is a sink and counter that was behind us. My X-ray specs are sitting by themselves on the counter.
+				They must not have known what they are and how useful they are."
+			}
+			else {
+				"I don't have the right tool!"
+			}
+		}
+		object DoLock
+		{
+			"I have no need to re-lock the padlock."
+		}
+	}
 }

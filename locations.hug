@@ -38,27 +38,32 @@ room TheExecutionRoom "The Sunset"
       {
           if player is incapacitated
           {
-              select verbroutine
-              case &DoLookAround, &DoLook, &DoTalk, &DoWait : return false
-              case &DoCatch {
-                if GameEvents[3] = 0
-                {
-                  "I can't do anything like that in my situation."
-                }
-                else {
-                  "The bobby pin is in a pretty predictable arc. I really don't have to move my hands much, which is good because of the chains. I snatch
-                  the pin out of the air.\n"
-                  "\"Got it!\" I say, triumphantly. The interrogator seemed like a bit of a clown and I think we're gonna get out of this. Looking at Alexandra,
-                  though - I think the act of tossing the pin took a bunch out of her. I see now that she's definitely got some scratches and shallow cuts on
-                  her."
-
-                  move bobbyPin to player 
-
-                }
+              if bobbyPin in player
+              {
+                return false
               }
-              case else :  "I'm chained up!"
+              else {
+                select verbroutine
+                case &DoLookAround, &DoLook, &DoTalk, &DoWait : return false
+                case &DoCatch {
+                  if GameEvents[3] = 0
+                  {
+                    "I can't do anything like that in my situation."
+                  }
+                  else {
+                    "The bobby pin is in a pretty predictable arc. I really don't have to move my hands much, which is good because of the chains. I snatch
+                    the pin out of the air.\n"
+                    "\"Got it!\" I say, triumphantly. The interrogator seemed like a bit of a clown and I think we're gonna get out of this. Looking at Alexandra,
+                    though - I think the act of tossing the pin took a bunch out of her. I see now that she's definitely got some scratches and shallow cuts on
+                    her."
 
-              return true
+                    move bobbyPin to player
+                  }
+                }
+                case else :  "I'm chained up!"
+
+                return true
+              }
           }
           else {
               return false
