@@ -254,5 +254,4 @@ resource "MONST01"
   "jpg/alexandra01-2560x1440.jpg"
 }
 
-
 #include "characters.hug"
