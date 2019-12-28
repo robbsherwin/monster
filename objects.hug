@@ -9,7 +9,7 @@ in TheExecutionRoom
 
 	long_desc
 	{
-		"The X-ray specs are glasses that, when lowered, allow me to take a scan of where I am. They work as a miniaturized X-ray machine at that point:
+		"The X-ray specs are glasses that allow me to perform a scan of where I am. They work as a miniaturized X-ray machine at that point:
 		the X-ray radiation gives me a view of the world that allows me to see through some walls and some flesh, and the electronics inside the
 		specs give me an understanding of the chemical composition of things that I am looking at.\n"
 
@@ -24,6 +24,19 @@ in TheExecutionRoom
 	}
 	before
 	{
+		object DoGet
+		{
+			move self to player
+			if GameEvents[7] = 0
+			{
+				GameEvents[8] = 1
+				"I take my X-ray specs. I'm glad to have them back! I guess they just thought they were junk when we got captured.
+			   I just need to wear them and then a sense of the normal around here will return somewhat."
+			}
+			else {
+				"Taken."
+			}
+		}
 		object DoDrop
 		{
 			"They are essential for me to do my job, I shouldn't be without them."
@@ -56,6 +69,7 @@ in TheExecutionRoom
       {
         GameEvents[0] = 1
         "I put them on. I feel complete, again."
+				self is worn
 
 	       if (display.hasgraphics) and GRAPHICS_ON = TRUE {
             ""
@@ -106,7 +120,7 @@ article "the"
 
 object padlock "padlock"
 {
-nouns "padlock"
+nouns "padlock" "lock"
 article "the"
 key_object bobbyPin
 is lockable, locked, hidden
@@ -117,22 +131,33 @@ in TheExecutionRoom
 		"Not a great looking lock, I don't think - probably pickable if I had the right tool"
 	}
 	before {
-		object DoUnlock
+		object DoPick
 		{
 			if bobbyPin in player
 			{
-				self is not locked
-				player is not incapacitated
+				if GameEvents[4] = 0
+				{
+					self is not locked
+					player is not incapacitated
+					remove padlock
+					move alexPadlock to location
 
-				"\I(So you know, I've done three magic tricks in my life. And only three. This is the first one, escaping some handcuffs.)\i\n"
+					"\I(So you know, I've done three magic tricks in my life. And only three. This is the first one, escaping some handcuffs.)\i\n"
 
-				"It takes about 15 seconds of fidgeting with the bobby pin and I am able to completely pick the padlock. It falls to the floor. I'm able to catch
-				the bobby pin as the lock drops.\n"
+					"It takes about 15 seconds of fidgeting with the bobby pin and I am able to completely pick the padlock. It falls to the floor. I'm able to catch
+					the bobby pin as the lock drops.\n"
 
-				"\"I did it!\" I say to Alexandra, looking for some confirmation at how wicked I am. She just nods quietly. She is really not doing well.\n"
+					"\"I did it!\" I say to Alexandra, looking for some confirmation at how wicked I am. She just nods quietly. She is really not doing well.\n"
 
-				"I'm able to take a look around the room - there is a sink and counter that was behind us. My X-ray specs are sitting by themselves on the counter.
-				They must not have known what they are and how useful they are."
+					"I'm able to take a look around the room - there is a sink and counter that was behind us. My X-ray specs are sitting by themselves on the counter.
+					They must not have known what they are and how useful they are."
+
+					!// She can't talk right now
+					Alexandra.talkValue = 2
+				}
+				else {
+					"I have already done that with my padlock."
+				}
 			}
 			else {
 				"I don't have the right tool!"
@@ -142,5 +167,44 @@ in TheExecutionRoom
 		{
 			"I have no need to re-lock the padlock."
 		}
+	}
+}
+
+object alexPadlock "padlock"
+{
+	nouns "padlock" "lock"
+	article "alexandra's", "the"
+	key_object bobbyPin
+	is lockable, locked, hidden
+
+	long_desc
+	{
+		"The lock keeping Alexandra bound looks just as low-quality as my lock did."
+	}
+	before
+	{
+			object DoPick
+			{
+				if bobbyPin in player
+				{
+					if GameEvents[5] = 0
+					{
+						GameEvents[5] = 1
+						"It takes me about ten seconds to align the tumblers in the padlock keeping Alexandra chained up. (I'm a big lockpick guy now, totally understand what's going on with these things, as can be seen.)\n"
+						"Alexandra's hands fall limply to her side. I manage to help her down. I think she used up all her energy when the Sunset's Commander was here, I definitely need to see if I can get her some help."
+					}
+					else {
+						"I don't need to do that again."
+					}
+				}
+				else {
+					"I don't have anything that can help pick Alexandra's padlock."
+				}
+
+			}
+			object DoLock
+			{
+					"That doesn't help me or my situation."
+			}
 	}
 }

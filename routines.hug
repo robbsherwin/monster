@@ -37,6 +37,11 @@ routine DoLower
 	"That can't be lowered."
 }
 
+routine DoPick
+{
+	"That can't be picked."
+}
+
 routine DoRaise
 {
 	"That can't be raised, unfortunately."
@@ -51,6 +56,30 @@ routine DoRespond
 {
 	"There's no computer here to respond to an instant message with. (Try using the talk command, like talk to Captain)"
 }
+
+routine DoScan
+{
+	if xRaySpecs not in player
+	{
+		"I need to have my X-ray specs on and be wearing them to do that."
+		return false
+	}
+
+	if xRaySpecs not worn
+	{
+		"I need to be wearing them to do a scan!"
+		return false
+	}
+
+	if location.xRayDescription	{
+		!// The check up there runs the xRayDescription
+		return true
+	}
+	else {
+		"Nothing special to report here."
+	}
+}
+
 routine DoWakeCharacter
 {
 	"That's probably not necessary."

@@ -70,12 +70,15 @@ talkValue 0
         self.talkValue = 999
 
       }
+      case 2
+      {
+        "Alexandra doesn't appear to be conscious enough to speak to me right now."
+      }
       case else {
         "I don't have anything to say to Alexandra at the moment."
       }
     }
   }
-
 }
 
 npc CommanderCarl "The Commander"
@@ -98,7 +101,7 @@ talkValue 0
 
   long_desc
   {
-    "He's a white guy but I can't get a read on his nationality. He has a pencil-thin moustache and pince-nez. He's decked out in a grey uniform, grey cap, grey pants and black boots." 
+    "He's a white guy but I can't get a read on his nationality. He has a pencil-thin moustache and pince-nez. He's decked out in a grey uniform, grey cap, grey pants and black boots."
   }
   before
   {

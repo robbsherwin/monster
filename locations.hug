@@ -61,7 +61,6 @@ room TheExecutionRoom "The Sunset"
                   }
                 }
                 case else :  "I'm chained up!"
-
                 return true
               }
           }
@@ -71,5 +70,9 @@ room TheExecutionRoom "The Sunset"
 
       }
     }
-
+    xRayDescription
+    {
+      "I see that there is a PIN-protected plate underneath the sink that contains some medical supplies. The PIN is just 1-1-1."
+      GameEvents[6] = 1
+    }
 }
