@@ -124,6 +124,8 @@ in TheExecutionRoom
 				self is not locked
 				player is not incapacitated
 
+				"\I(So you know, I've done three magic tricks in my life. And only three. This is the first one, escaping some handcuffs.)\i\n"
+
 				"It takes about 15 seconds of fidgeting with the bobby pin and I am able to completely pick the padlock. It falls to the floor. I'm able to catch
 				the bobby pin as the lock drops.\n"
 

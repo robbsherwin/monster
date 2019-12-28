@@ -12,8 +12,8 @@ room TheExecutionRoom "The Sunset"
       marquee is not finished. This is a ship called the Sunset Sponsored by Guaranteed Rate.\n"
 
       "I'm chained to a metal column in a cold room. My crewmate Alexandra is to my left, chained up as well. We're just two
-      low-level nobodies enlisted on a green flying saucer. What would anyone want with us? Are mortgage rates so bad they've
-      taken to kidnapping applicants?"
+      low-level nobodies enlisted on a green flying saucer. What would anyone want with us? Why does this ship need that sponsor?
+      Are mortgage rates so bad they've simply taken to kidnapping applicants?"
 
       Activate(Commander_Carl_Arrives)
 
