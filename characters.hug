@@ -81,7 +81,7 @@ talkValue 0
 npc CommanderCarl "The Commander"
 {
 charnumber 3
-nouns "commander" "carl"
+nouns "commander" "carl" "man" "guy"
 adjective "commander"
 pronouns "he", "his", "his", "himself"
 capacity 50
@@ -98,6 +98,9 @@ talkValue 0
 
   long_desc
   {
+    "He has a pencil-thin moustache and pince-nez  . He's decked out in a grey uniform, grey cap, grey pants and black boots. He is wearing a pince-nez and is clean-shaven.
+  I've seen some ridiculous costumes in the solar system. This guy is trying really hard to make people think he's almost a Nazi.
+  94 percent dressed like a Nazi.\n"
 
   }
   before
