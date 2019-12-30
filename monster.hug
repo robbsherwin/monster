@@ -21,6 +21,7 @@
 
 !// Verbs
 verb "catch", "grab"
+  * object DoCatch
   * DoCatch
 
 verb "jump", "hop"
@@ -84,7 +85,7 @@ array GameEvents[MAX_GAME_EVENTS]
 ! GameEvents[3] = Are we OK to use the catch verb?
 ! GameEvents[4] = Did Ja'Rod pick his lock?
 ! GameEvents[5] = Did Ja'Rod pick the lock that is keeping Alexandra bound?
-! GameEvents[6] = Does Ja'Rod know the PIN for the safe underneath the sink in TheExecutionRoom ? 
+! GameEvents[6] = Does Ja'Rod know the PIN for the safe underneath the sink in TheExecutionRoom ?
 
 routine init
 {

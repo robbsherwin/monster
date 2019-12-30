@@ -78,11 +78,15 @@ event in Alexandra_Talks_ExecutionRoom
   {
     "Alexandra checks again to make sure that there's nobody near the door. \"Ja'Rod, I have a bobby pin in my hair that I can reach. I am going to take
     it out and throw it to you so you can catch it and pick your padlock, okay?\"\n"
+
     "I have no idea what a 'bobby pin' is. I'm also not the strongest lockpicker in the solar system, having never previously thought about the concept for
     even a split second of my life. I just nod, though, because dark circles are starting to appear under Alexandra's eyes and I don't know if she's got
     the strength to try herself.\n"
-    "\"Okay, Ja'Rod? Are you ready?\" She takes one out of her hair and throws it in a graceful arc towards me."
 
-    GameEvents[3] = 1
+    move bobbyPin to location
+
+    "\"Okay, Ja'Rod? Are you ready to try?\" She takes one out of her hair and throws it in a graceful arc towards me."
+
+    GameEvents[3] = 1 !// GameEvents[3] = Are we OK to use the catch verb?
   }
 }

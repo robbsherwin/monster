@@ -14,7 +14,14 @@ routine DoAbout
 
 routine DoCatch
 {
-	"There's nothing I can catch right now."
+	if GameEvents[3] = 1
+	{
+		Perform(&DoCatch, object)
+	}
+	else {
+		"There's nothing I can catch right now."
+	}
+
 }
 
 routine DoFix
