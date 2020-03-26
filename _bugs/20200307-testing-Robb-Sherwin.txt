@@ -1,0 +1,114 @@
+
+The Sunset
+I was on a derelict ship. That I remember. Two of us. We found white cheese curds, we thought the Captain would like it for her poutine. I was with Alexandra, she's the life support tech in our crew. I don't know how we got here. This is different. This is ... I can see a scrolling red LED marquee. This is a ship called the Sunset. I'm chained -- ope, the marquee is not finished. This is a ship called the Sunset Sponsored by Guaranteed Rate.
+
+I'm chained to a metal column in a cold room. My crewmate Alexandra is to my left, chained up as well. We're just two low-level nobodies enlisted on a green flying saucer. What would anyone want with us? Why does this ship need that sponsor? Are mortgage rates so bad they've simply taken to kidnapping applicants?
+
+>x me
+I am a twenty-four year old Ethiopian male, I am 5'9" tall and I weigh 145 pounds. I have black hair and brown eyes. I am wearing a white T-shirt, blue jeans and grey moon boots for shoes. My hair is buzzed pretty tightly against my head and I have a little bit of beard stubble.
+
+An older white man on the opposite side of the door presses a keycard up against the door frame. Nothing happens. He tries again. Still nothing. We can't hear him, but he seems to be shouting into the sky.
+
+After another 15 seconds where he very specifically avoids looking at us he enters the room. He has a pencil-thin moustache. He's decked out in a grey uniform, grey cap, grey pants and black boots. He is wearing a pince-nez and is clean-shaven. I've seen some ridiculous costumes in the solar system. This guy is trying really hard to make people think he's almost a Nazi. 94 percent dressed like a Nazi.
+
+He approaches and speaks to me.
+
+"I am Commander Carl," he says without eye contact. "I am in charge of this vessel." He ignores Alexandra, which I feel may be a weird gender-anger thing. He makes eye contact with me for the first time. "Your name," he says, evenly.
+
+>talk to carl
+"Ja'Rod Butler," I tell him, figuring there is no harm in providing that information. I was told by my Captain once that if I were ever kidnapped it's okay to tell the kidnappers my name, my registration number and the name of my ship. I don't remember my registration number so I hope I don't get asked it.
+
+"You are an X-ray technician on the HMCS Plagoo," says the Commander. Definitely a statement, not a question. "What the name of your Captain?"
+
+>talk to alexandra
+I don't know if now is a good time to talk to her!
+
+>talk to carl
+"That's none of your business!" I say to him. "I'll die before telling--"
+
+Alexandra, my crew-mate (chained up next to me) cuts me off.
+
+"Don't kill him, he's an idiot. Our Captain's name is Jessica Stafford. I am sure she'd like us back. She's broke, though, which is why we were doing a scavenger run of that derelict craft that you took us away from."
+
+Commander Carl produces a knife. Not gonna lie, I'm not a big knife guy. I know scimitars and butter ones by name and this is neither. I don't know how to spell the word stilleto, but it might be one of those?
+
+"And you," the Commander says. "Alexandra Mays. We know all about you. You applied here." I can see a dozen different sharp replies spin through Alexandra's mind.
+
+"Did I mess up the 'Objective' section of my resume?" she asks, settling on that one.
+
+"I will be back after having tested this information," says the Commander. "Don't move," he adds with a sneer.
+
+The Commander turns on his heel to leave. He gets an audio message through the ship's intercom system.
+
+"Commander..." says a male voice, cracking. "Commander, this is Number Two. Seem to have lost my keycard, sir..." Commander Carl just shakes his head and mutters something about chaining up that guy next.
+
+He uses his own keycard against the door and leaves the room.
+
+>look
+
+The Sunset brought to us by Guaranteed Rate.
+Alexandra checks again to make sure that there's nobody near the door. "Ja'Rod, I have a bobby pin in my hair that I can reach. I am going to take it out and throw it to you so you can catch it and pick your padlock, okay?"
+
+I have no idea what a 'bobby pin' is. I'm also not the strongest lockpicker in the solar system, having never previously thought about the concept for even a split second of my life. I just nod, though, because dark circles are starting to appear under Alexandra's eyes and I don't know if she's got the strength to try herself.
+
+"Okay, Ja'Rod? Are you ready?" She takes one out of her hair and throws it in a graceful arc towards me.
+
+>catch the pin
+That doesn't make any sense.
+
+>take the pin
+I haven't seen anything like that.
+
+>take the bobby pin
+I haven't seen anything like that.
+
+>catch
+The bobby pin is in a pretty predictable arc. I really don't have to move my hands much, which is good because of the chains. I snatch the pin out of the air.
+
+"Got it!" I say, triumphantly. The interrogator seemed like a bit of a clown and I think we're gonna get out of this. Looking at Alexandra, though - I think the act of tossing the pin took a bunch out of her. I see now that she's definitely got some scratches and shallow cuts on her.
+
+>unlock myself
+I can't do that with .
+
+>unlock chain
+You don't need to use the word "chain".
+
+>unlock lock
+(with the bobby pin)
+Unlocked.
+
+>look
+
+The Sunset brought to us by Guaranteed Rate.
+
+>unlock alexandra
+I can't do that with Alexandra.
+
+>unlock alexandra's chain
+You don't need to use the word "chain".
+
+>unlock alexandra's lock
+That doesn't make any sense.
+
+>look
+
+The Sunset brought to us by Guaranteed Rate.
+
+>i
+I are carrying the bobby pin.
+
+>get the glasses
+You don't need to use the word "glasses".
+
+>get the specs
+I take my X-ray specs. I'm glad to have them back! I guess they just thought they were junk when we got captured. I just need to wear them and then a sense of the normal around here will return somewhat.
+
+>wear the specs
+I put them on. I feel complete, again.
+
+[Strike any key to continue.]
+
+>history
+You don't need to use the word "history".
+
+>
