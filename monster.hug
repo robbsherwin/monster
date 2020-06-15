@@ -131,6 +131,8 @@ routine init
 
   locate 1,10
 
+  OpCodeAudit()
+  pause
   DescribePlace(location)
   location is visited
   CalculateHolding(player)
